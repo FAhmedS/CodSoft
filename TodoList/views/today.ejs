@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <!-- <h1>Hello World!</h1> -->
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <h1 class="Logo">To-do List</h1>
+                <img class="note" src="images/note.png" alt="">
+                <img class="menu" src="images/menu.png" alt="">
+                
+                <ul>
+                    <li><a href="/work" class="links">Work</a></li>
+                    <li><a href="/today" class="links">Today</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <img class="gNote" src="images/gNote.png" alt="">
+        <img class="oNote" src="images/oNote.png" alt="">
+        <img class="lt" src="images/lt.png" alt="">
+        
+        <div class="dropDownMenu">
+            <ul>
+                <li><a href="/work" class="links">Work</a></li>
+                <li><a href="/today" class="links">Today</a></li>
+            </ul>
+        </div>
+        
+        <div class="secondHeading">
+            <h1><%= dateTime %></h1>
+            <img class="mcNote" src="images/mcNote.png" alt="">
+        </div>
+        
+
+
+        <% if(locals.array1){%>
+            <% for(let i = 0 ; i<array1.length ; i++){ %>
+                <div class="upperPortion">
+                    <input type="checkbox">
+                    <label for="cbox">
+                        <h2><%= array1[i] %></h2>
+                    </label>
+                </div>
+            <% } %>
+            <% } %>
+
+
+
+        <div class="todolist">
+            <form action="/submit1" method="post">
+                <input type="text" name="inputed" placeholder="New Item">
+                <button type="submit">+</button>    
+            </form>
+        </div>
+        <footer>Copyright © 2023</footer>
+    </div>
+</body>
+<%- include("partials/footer.ejs") %>

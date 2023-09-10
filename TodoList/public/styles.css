@@ -1,0 +1,220 @@
+body{
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    /* background-color: linear; */
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.navbar
+{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: azure;
+    justify-content: center;
+    align-items: center;
+
+}
+nav ul{
+    width: 50%;
+    display: flex;
+    gap: 2rem;
+}
+nav li{
+    list-style-type: none;
+    display: flex;
+}
+nav li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+nav li a:hover{
+    color: rgb(255, 177, 69);
+}
+nav h1{
+    display: flex;
+    position: absolute;
+    left: 100px;
+    top: -12px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Tilt Prism', cursive;
+}
+.secondHeading
+{
+    display: flex;
+    width: 380px;
+    height: 80px;
+    background: linear-gradient(150deg, rgb(59, 241, 92) 60%, rgb(86, 255, 126) 60%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+.secondHeading h1{
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    letter-spacing: 0.9px;
+    padding: 15px;  
+}
+.todolist form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content :center;
+}
+.todolist form input{
+    display: flex;
+    margin-top: 20px;
+    width: 350px;
+    padding: 20px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 7px 0px 4px gray;
+    transition: font-size 300ms 0s;
+    margin-left: 45px ;
+}
+.todolist form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(134, 79, 228);
+    transition: transform 500ms 0s;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.todolist input:active , 
+.todolist input:hover{
+    font-size: 13px;
+    border-bottom: 2px solid purple;
+}
+.todolist button:hover{
+    background-color: rgb(198, 68, 234);
+    transform : rotate(90deg);
+}
+.upperPortion{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 10px;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 4px 4px gray;
+}
+.upperPortion input:checked + label {
+    color: #1fd6b2;
+    text-decoration: line-through;
+}
+footer{
+    display: flex;
+    font-size: 20px;
+    color: rgb(158, 94, 3);
+    align-items : flex-end;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 700px;
+    background-color: azure;
+    padding: 30px;
+    border-radius: 10px;
+}
+.note{
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    left: 265px;
+    top: 23px;
+}
+.gNote{
+    display: inline-block;
+    width: 270px;
+    position: absolute;
+    top: 480px;
+    left: 300px;
+}
+.oNote{
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    top: 100px;
+    left: 1300px;
+}
+.lt{
+    display: inline-block;
+    width: 280px;
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+}
+.mcNote{
+    display: inline;
+    width: 48px;
+    position:sticky;
+    left: 1110px;
+    top: 190px;
+}
+.menu{
+    display: none;
+}
+.dropDownMenu{
+    display: none;
+    position: absolute;
+    right: 4.2rem;
+    top: 3rem;
+    width: 100px;
+    background-color: rgba(255, 255, 255 , 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+}
+.dropDownMenu li{
+    list-style-type: none;
+    padding: 0.3rem;
+}
+.dropDownMenu a{
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Tilt Prism', cursive;;
+    text-decoration: none;
+}
+
+.dropDownMenu a:hover{
+    color: coral;
+}
+
+@media only screen and (max-width : 900px){
+    nav li{
+        display: none;
+    }
+    .menu
+    {
+        width: 22px;
+        display: flex;
+        margin-left: 370px;
+        margin-top: 35px;
+    }
+
+}
+@media only screen and (max-width : 1700px){
+    .gNote{
+        display: none;
+    }
+}
